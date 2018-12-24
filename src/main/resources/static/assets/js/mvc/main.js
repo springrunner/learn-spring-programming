@@ -1,5 +1,6 @@
 import App from './App.vue.js'
 import Home from './components/Home.vue.js'
+import Simple from './components/Simple.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
@@ -8,6 +9,9 @@ Vue.prototype.$http = axios
 
 const router = new VueRouter({
     routes: [{
+        path: '/simple',
+        component: Simple
+    },{
         path: '/',
         component: Home
     },{
