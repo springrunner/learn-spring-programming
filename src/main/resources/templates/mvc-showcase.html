@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spring Web Showcase Site">
+    <meta name="author" content="SpringRunner">
+    
+    <title>Spring Web Showcase</title>
+
+    <link th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/default.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/messages/messages.css}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar sticky-top navbar-dark bg-dark p-0 shadow">
+  <a class="navbar-brand" href="#">Spring MVC Showcase</a>
+  <span class="navbar-text" style="padding-right: 20px;">
+      Recommended: Using a Web Developer tool such a Firebug to inspect the client/server interaction
+    </span>
+</nav>
+<div class="container-fluid">
+    <div id="app" class="row"></div>
+</div>
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.14.3/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/feather-icons/4.9.0/dist/feather.min.js}"></script>
+<script th:src="@{/webjars/vue/2.5.16/vue.min.js}"></script>
+<script th:src="@{/webjars/vue-router/3.0.1/dist/vue-router.min.js}"></script>
+<script th:src="@{/webjars/axios/0.18.0/dist/axios.min.js}"></script>
+<script th:src="@{/assets/js/mvc/main.js}" type="module"></script>
+</body>
+</html>

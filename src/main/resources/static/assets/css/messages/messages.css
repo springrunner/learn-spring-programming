@@ -1,0 +1,36 @@
+div.info, div.success, div.warning, div.error {
+	border: 1px solid;
+	margin: 10px 0;
+	padding: 15px 10px 15px 50px;
+	background: no-repeat 10px center;
+}
+
+div.info {
+	color: #00529B;
+	background: #BDE5F8 url('info.png');
+}
+
+div.success {
+	color: #4F8A10;
+	background: #DFF2BF url('success.png');
+}
+
+div.warning {
+	color: #9F6000;
+	background: #FEEFB3 url('warning.png');
+}
+
+div.error {
+	color: #D8000C;
+	background: #FFBABA url('error.png');
+}
+
+span.success {
+	margin: 5px 5px 5px 5px;
+	color: #4F8A10;
+}
+
+span.error {
+	margin: 5px 5px 5px 5px;
+	color: #D8000C;
+}
