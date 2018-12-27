@@ -86,3 +86,11 @@ body {
 [role="main"] {
   padding-top: 24px; /* Space for fixed navbar */
 }
+
+[role="main"] a, [role="main"] a:hover {
+  color: #222222;
+}
+
+[role="main"] ul li {
+  padding: 5px;
+}
