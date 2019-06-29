@@ -19,4 +19,3 @@ public class SpringWebShowcaseApplication implements WebMvcConfigurer {
 	}
 
 }
-

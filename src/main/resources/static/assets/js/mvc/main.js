@@ -3,6 +3,7 @@ import Home from './components/Home.vue.js'
 import Simple from './components/Simple.vue.js'
 import RequestMapping from './components/RequestMapping.vue.js'
 import RequestData from './components/RequestData.vue.js'
+import Forms from './components/Forms.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
@@ -22,6 +23,9 @@ const router = new VueRouter({
     },{
         path: '/request-data',
         component: RequestData
+    },{
+        path: '/forms',
+        component: Forms
     },{
         path: '/',
         component: Home
