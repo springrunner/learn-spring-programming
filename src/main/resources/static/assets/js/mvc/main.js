@@ -4,6 +4,7 @@ import Simple from './components/Simple.vue.js'
 import RequestMapping from './components/RequestMapping.vue.js'
 import RequestData from './components/RequestData.vue.js'
 import Forms from './components/Forms.vue.js'
+import FileUpload from './components/FileUpload.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
@@ -26,6 +27,9 @@ const router = new VueRouter({
     },{
         path: '/forms',
         component: Forms
+    },{
+        path: '/file-upload',
+        component: FileUpload
     },{
         path: '/',
         component: Home
