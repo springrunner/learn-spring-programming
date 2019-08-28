@@ -5,6 +5,7 @@ import RequestMapping from './components/RequestMapping.vue.js'
 import RequestData from './components/RequestData.vue.js'
 import Forms from './components/Forms.vue.js'
 import FileUpload from './components/FileUpload.vue.js'
+import TypeConversion from './components/TypeConversion.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
@@ -30,6 +31,9 @@ const router = new VueRouter({
     },{
         path: '/file-upload',
         component: FileUpload
+    },{
+        path: '/type-conversion',
+        component: TypeConversion
     },{
         path: '/',
         component: Home
@@ -94,8 +98,8 @@ Vue.component('text-link', {
         request(event) {
             const link = $(event.target)
             const method = this.method
-            const url = event.srcElement.href
             const headers = this.headers
+            const url = event.srcElement.href
             const params = this.params
             const data = this.data
 
