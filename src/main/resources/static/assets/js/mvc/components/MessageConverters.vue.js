@@ -18,7 +18,7 @@ export default {
             
             <h6>MappingJackson2HttpMessageConverter</h6>
             <ul>
-                <text-link link="/messageconverters/json" method="post" v-bind:data="{'foo':'bar','fruit':'apple'}" text="Read JSON"></text-link>
+                <text-link link="/messageconverters/json" method="post" content-type="application/json" data='{"foo":"bar","fruit":"apple"}' text="Read JSON"></text-link>
                 <text-link link="/messageconverters/json" accept="application/json" text="Write JSON via Accept=application/json"></text-link>
                 <text-link link="/messageconverters/json.json" text="Write JSON via '.json'"></text-link>
             </ul>
