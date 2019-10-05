@@ -1,4 +1,4 @@
-package showcase.mvc.views;
+package showcase.mvc.response;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
