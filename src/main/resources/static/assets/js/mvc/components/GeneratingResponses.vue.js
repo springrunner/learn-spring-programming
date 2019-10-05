@@ -1,8 +1,8 @@
 export default {
-    name: 'ResponseWriting',
+    name: 'GeneratingResponses',
     template: `
         <div>
-            <h2>Response Writing</h2>
+            <h2>Generating Responses</h2>
             <p>See the <code>showcase.mvc.response</code> package for the @Controller code</p>
             <ul>
                 <text-link link="/response/annotation" text="@ResponseBody"></text-link>

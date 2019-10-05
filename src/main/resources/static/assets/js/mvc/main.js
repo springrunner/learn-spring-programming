@@ -8,7 +8,7 @@ import FileUpload from './components/FileUpload.vue.js'
 import TypeConversion from './components/TypeConversion.vue.js'
 import Validation from './components/Validation.vue.js'
 import RenderingViews from './components/RenderingViews.vue.js'
-import ResponseWriting from './components/ResponseWriting.vue.js'
+import GeneratingResponses from './components/GeneratingResponses.vue.js'
 import MessageConverter from './components/MessageConverter.vue.js'
 import Redirecting from './components/Redirecting.vue.js'
 import AsyncRequest from './components/AsyncRequest.vue.js'
@@ -48,8 +48,8 @@ const router = new VueRouter({
         path: '/rendering-views',
         component: RenderingViews
     },{
-        path: '/response-writing',
-        component: ResponseWriting
+        path: '/generating-responses',
+        component: GeneratingResponses
     },{
         path: '/message-converter',
         component: MessageConverter

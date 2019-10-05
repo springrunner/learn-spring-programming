@@ -59,9 +59,9 @@ export default {
                 feather: 'file-text',
                 text: 'Rendering Views'
             },{
-                link: '/response-writing',
+                link: '/generating-responses',
                 feather: 'file-text',
-                text: 'Response Writing'
+                text: 'Generating Responses'
             },{
                 link: '/message-converter',
                 feather: 'file-text',
