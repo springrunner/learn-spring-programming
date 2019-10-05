@@ -4,7 +4,7 @@
 
 Demonstrates the capabilities of the Spring Web technologies through small, simple examples. the showcase is going to be made up of a [Servlet stack](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#spring-web) and a [Reactive stack](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#spring-webflux).
 
-## Servlet stack: Spring MVC, WebSocket, SockJS, STOMP messaging.
+## [Servlet stack](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#spring-web): Spring MVC, WebSocket, SockJS, STOMP messaging.
 
 ### Spring MVC
 
@@ -27,7 +27,7 @@ In this showcase you'll see the following in action:
 
 > Not ready yet
 
-## Reactive stack: Spring WebFlux, WebClient, WebSocket.
+## [Reactive stack](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#spring-webflux): Spring WebFlux, WebClient, WebSocket.
 
 > Not ready yet
 
