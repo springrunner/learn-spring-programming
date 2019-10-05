@@ -9,7 +9,7 @@ import TypeConversion from './components/TypeConversion.vue.js'
 import Validation from './components/Validation.vue.js'
 import RenderingViews from './components/RenderingViews.vue.js'
 import GeneratingResponses from './components/GeneratingResponses.vue.js'
-import MessageConverter from './components/MessageConverter.vue.js'
+import MessageConverters from './components/MessageConverters.vue.js'
 import Redirecting from './components/Redirecting.vue.js'
 import AsyncRequest from './components/AsyncRequest.vue.js'
 import ExceptionHandling from './components/ExceptionHandling.vue.js'
@@ -51,8 +51,8 @@ const router = new VueRouter({
         path: '/generating-responses',
         component: GeneratingResponses
     },{
-        path: '/message-converter',
-        component: MessageConverter
+        path: '/message-converters',
+        component: MessageConverters
     },{
         path: '/redirecting',
         component: Redirecting

@@ -7,8 +7,8 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/messageconverter")
-public class MessageConverterController {
+@RequestMapping("/messageconverters")
+public class MessageConvertersController {
 
 	// StringHttpMessageConverter
 
@@ -37,18 +37,6 @@ public class MessageConverterController {
 		return map;
 	}
 
-	// Jaxb2RootElementHttpMessageConverter (requires JAXB2 on the classpath - useful for serving clients that expect to work with XML)
-
-	@PostMapping("/xml")
-	public String readXml(@RequestBody JavaBean bean) {
-		return "Read from XML: " + bean;
-	}
-
-	@GetMapping("/xml")
-	public JavaBean writeXml() {
-		return new JavaBean("bar", "apple");
-	}
-
 	// MappingJackson2HttpMessageConverter (requires Jackson2 on the classpath - particularly useful for serving JavaScript clients that expect to work with JSON)
 
 	@PostMapping("/json")
@@ -58,6 +46,18 @@ public class MessageConverterController {
 
 	@GetMapping("/json")
 	public JavaBean writeJson() {
+		return new JavaBean("bar", "apple");
+	}
+
+	// Jaxb2RootElementHttpMessageConverter (requires JAXB2 on the classpath - useful for serving clients that expect to work with XML)
+
+	@PostMapping("/xml")
+	public String readXml(@RequestBody JavaBean bean) {
+		return "Read from XML: " + bean;
+	}
+
+	@GetMapping("/xml")
+	public JavaBean writeXml() {
 		return new JavaBean("bar", "apple");
 	}
 
