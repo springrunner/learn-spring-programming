@@ -11,13 +11,14 @@ import ViewRendering from './components/ViewRendering.vue.js'
 import ResponseWriting from './components/ResponseWriting.vue.js'
 import MessageConverter from './components/MessageConverter.vue.js'
 import Redirecting from './components/Redirecting.vue.js'
+import AsyncRequest from './components/AsyncRequest.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
 
-axios.defaults.timeout = 2000
+axios.defaults.timeout = 30000
 axios.defaults.withCredentials = true
 
 const router = new VueRouter({
@@ -54,6 +55,9 @@ const router = new VueRouter({
     },{
         path: '/redirecting',
         component: Redirecting
+    },{
+        path: '/async-request',
+        component: AsyncRequest
     },{
         path: '/',
         component: Home

@@ -1,5 +1,7 @@
 spring:
   mvc:
+    async:
+      request-timeout: 60000
     contentnegotiation:
       favor-path-extension: true
       media-types.xml: application/xml

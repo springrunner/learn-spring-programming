@@ -71,9 +71,9 @@ export default {
                 feather: 'file-text',
                 text: 'Redirecting'
             },{
-                link: '/async-requests',
+                link: '/async-request',
                 feather: 'file-text',
-                text: 'Async Requests'
+                text: 'Async Request'
             },{
                 link: '/exception-handling',
                 feather: 'file-text',
