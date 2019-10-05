@@ -105,12 +105,18 @@ Vue.component('text-link', {
             const headers = this.headers
             const url = event.srcElement.href
             const params = this.params
-            const data = this.data
+            const data = this.isFormSubmit() ? Object.keys(this.data).reduce((formData, key) => {
+                formData.append(key, this.data[key]);
+                return formData;
+            }, new FormData()) : this.data
 
             if (MvcUtil.isNotEmpty(this.accept)) {
                 headers['Accept'] = this.accept
             }
             if (MvcUtil.isNotEmpty(this.contentType)) {
+                if (this.isFormSubmit()) {
+                    this.contentType = 'application/x-www-form-urlencoded'
+                }
                 headers['Content-Type'] = this.contentType
             }
 
@@ -121,10 +127,18 @@ Vue.component('text-link', {
                 }
                 MvcUtil.showSuccessResponse(responseText, link)
             }).catch(error => {
-                MvcUtil.showErrorResponse(error, link)
+                const responseText = error.response.data
+                if (MvcUtil.isNotEmpty(responseText)) {
+                    MvcUtil.showErrorResponse(responseText, link)
+                } else {
+                    MvcUtil.showErrorResponse(error, link)
+                }
             }).finally(() => {
 
             })
+        },
+        isFormSubmit() {
+            return this.contentType === 'form'
         }
     }
 })
