@@ -7,6 +7,7 @@ import Forms from './components/Forms.vue.js'
 import FileUpload from './components/FileUpload.vue.js'
 import TypeConversion from './components/TypeConversion.vue.js'
 import Validation from './components/Validation.vue.js'
+import ViewRendering from './components/ViewRendering.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
@@ -38,6 +39,9 @@ const router = new VueRouter({
     },{
         path: '/validation',
         component: Validation
+    },{
+        path: '/view-rendering',
+        component: ViewRendering
     },{
         path: '/',
         component: Home
