@@ -9,6 +9,7 @@ import TypeConversion from './components/TypeConversion.vue.js'
 import Validation from './components/Validation.vue.js'
 import ViewRendering from './components/ViewRendering.vue.js'
 import ResponseWriting from './components/ResponseWriting.vue.js'
+import MessageConverter from './components/MessageConverter.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
@@ -46,6 +47,9 @@ const router = new VueRouter({
     },{
         path: '/response-writing',
         component: ResponseWriting
+    },{
+        path: '/message-converter',
+        component: MessageConverter
     },{
         path: '/',
         component: Home

@@ -1,3 +1,12 @@
+spring:
+  mvc:
+    contentnegotiation:
+      favor-path-extension: true
+      media-types.xml: application/xml
+      media-types.json: application/json
+    pathmatch:
+      use-registered-suffix-pattern: true
+
 logging.level:
   org.springframework:
     web: DEBUG

@@ -63,9 +63,9 @@ export default {
                 feather: 'file-text',
                 text: 'Response Writing'
             },{
-                link: '/message-converters',
+                link: '/message-converter',
                 feather: 'file-text',
-                text: 'Message Converters'
+                text: 'Message Converter'
             },{
                 link: '/redirecting',
                 feather: 'file-text',
