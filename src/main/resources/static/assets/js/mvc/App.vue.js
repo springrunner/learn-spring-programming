@@ -55,9 +55,9 @@ export default {
                 feather: 'file-text',
                 text: 'Validation'
             },{
-                link: '/view-rendering',
+                link: '/rendering-views',
                 feather: 'file-text',
-                text: 'View Rendering'
+                text: 'Rendering Views'
             },{
                 link: '/response-writing',
                 feather: 'file-text',

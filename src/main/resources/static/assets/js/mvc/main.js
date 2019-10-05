@@ -7,7 +7,7 @@ import Forms from './components/Forms.vue.js'
 import FileUpload from './components/FileUpload.vue.js'
 import TypeConversion from './components/TypeConversion.vue.js'
 import Validation from './components/Validation.vue.js'
-import ViewRendering from './components/ViewRendering.vue.js'
+import RenderingViews from './components/RenderingViews.vue.js'
 import ResponseWriting from './components/ResponseWriting.vue.js'
 import MessageConverter from './components/MessageConverter.vue.js'
 import Redirecting from './components/Redirecting.vue.js'
@@ -45,8 +45,8 @@ const router = new VueRouter({
         path: '/validation',
         component: Validation
     },{
-        path: '/view-rendering',
-        component: ViewRendering
+        path: '/rendering-views',
+        component: RenderingViews
     },{
         path: '/response-writing',
         component: ResponseWriting

@@ -1,4 +1,4 @@
-package showcase.mvc.view;
+package showcase.mvc.views;
 
 import javax.validation.constraints.NotNull;
 
