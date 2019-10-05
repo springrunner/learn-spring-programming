@@ -12,6 +12,7 @@ import ResponseWriting from './components/ResponseWriting.vue.js'
 import MessageConverter from './components/MessageConverter.vue.js'
 import Redirecting from './components/Redirecting.vue.js'
 import AsyncRequest from './components/AsyncRequest.vue.js'
+import ExceptionHandling from './components/ExceptionHandling.vue.js'
 import MvcUtil from './mvc.util.js'
 
 Vue.use(VueRouter)
@@ -58,6 +59,9 @@ const router = new VueRouter({
     },{
         path: '/async-request',
         component: AsyncRequest
+    },{
+        path: '/exception-handling',
+        component: ExceptionHandling
     },{
         path: '/',
         component: Home
