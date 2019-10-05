@@ -30,6 +30,10 @@ span.success {
 	color: #4F8A10;
 }
 
+span.success div.card {
+	margin-top: 20px;
+}
+
 span.error {
 	margin: 5px 5px 5px 5px;
 	color: #D8000C;
