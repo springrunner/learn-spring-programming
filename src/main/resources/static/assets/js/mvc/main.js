@@ -151,7 +151,11 @@ Vue.component('text-link', {
                 }
                 MvcUtil.showSuccessResponse(responseText, link)
             }).catch(error => {
-                const responseText = error.response.data
+                let responseText = error.response.data
+                if (typeof responseText === 'object') {
+                    responseText = `Error [status: ${responseText.status}, message: ${responseText.message}]`
+                }
+
                 if (MvcUtil.isNotEmpty(responseText)) {
                     MvcUtil.showErrorResponse(responseText, link)
                 } else {
