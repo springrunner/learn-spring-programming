@@ -9,7 +9,12 @@ spring:
     pathmatch:
       use-registered-suffix-pattern: true
 
+server:
+  undertow:
+    worker-threads: 10
+
 logging.level:
+  showcase: DEBUG
   org.springframework:
     web: DEBUG
     boot: INFO
