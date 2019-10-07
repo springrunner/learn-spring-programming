@@ -26,4 +26,11 @@ public class JavaBean {
 		this.fruit = fruit;
 	}
 
+	public static JavaBean of(String foo, String fruit) {
+		JavaBean javaBean = new JavaBean();
+		javaBean.setFoo(foo);
+		javaBean.setFruit(fruit);
+		return javaBean;
+	}
+
 }
