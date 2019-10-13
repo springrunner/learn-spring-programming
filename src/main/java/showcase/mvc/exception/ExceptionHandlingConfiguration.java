@@ -1,5 +1,12 @@
 package showcase.mvc.exception;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.boot.web.server.ErrorPageRegistrar;
 import org.springframework.boot.web.server.ErrorPageRegistry;
@@ -9,18 +16,25 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.Map;
-import java.util.Properties;
-
 @Configuration
-public class ExceptionHandlingConfiguration implements ErrorPageRegistrar {
+public class ExceptionHandlingConfiguration implements WebMvcConfigurer, ErrorPageRegistrar {
 
-    @Bean
-    public HandlerExceptionResolver simpleMappingExceptionResolver() {
+	@Override
+	public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
+		// HandlerExceptionResolver를 직접 구성할 때 사용 
+	}
+
+	@Override
+	public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
+		// HandlerExceptionResolver 기본 전략 구성외 추가 전략을 구성할 때 사용
+		// 스프링 4.3 이후 사용 가능
+		resolvers.add(creeateSimpleMappingExceptionResolver());
+	}
+
+	protected SimpleMappingExceptionResolver creeateSimpleMappingExceptionResolver() {
         Properties mappings = new Properties();
         mappings.put(MappedException.class.getName(), "mappedExceptionView");
 

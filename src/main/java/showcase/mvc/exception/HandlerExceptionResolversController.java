@@ -24,7 +24,7 @@ public class HandlerExceptionResolversController {
 		throw new ConflictException();
 	}
 
-	@ExceptionHandler
+	@ExceptionHandler(IllegalStateException.class)
 	public String handle(IllegalStateException error) {
 		return "IllegalStateException handled!";
 	}
