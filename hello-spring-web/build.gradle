@@ -1,0 +1,18 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	runtimeOnly 'javax.servlet:jstl'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+sourceCompatibility = '1.8'
