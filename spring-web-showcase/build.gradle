@@ -38,6 +38,9 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-undertow')
 
 	implementation('com.fasterxml.jackson.dataformat:jackson-dataformat-xml')
+        implementation('javax.xml.bind:jaxb-api:2.3.0')
+        implementation('com.sun.xml.bind:jaxb-core:2.3.0.1')
+        implementation('com.sun.xml.bind:jaxb-impl:2.3.0.1')
 	implementation('com.samskivert:jmustache')
 	implementation('com.rometools:rome:1.12.2')
 	implementation("com.github.ua-parser:uap-java:1.4.3")
