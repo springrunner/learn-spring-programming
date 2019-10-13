@@ -6,6 +6,8 @@ export default {
             <p>See the <code>showcase.mvc.data</code> package for the @Controller code</p>
             <ul>
                 <text-link link="/data/param?foo=bar"></text-link>
+                <text-link link="/data/param/no-name?foo=bar"></text-link>
+                <text-link link="/data/param/no-request-param?foo=bar"></text-link>
                 <text-link link="/data/group?param1=foo&param2=bar&param3=baz"></text-link>
                 <text-link link="/data/path/foo"></text-link>
                 <text-link link="/data/matrixvars;foo=bar/simple"></text-link>
@@ -29,7 +31,8 @@ export default {
             <h2>Custom Resolvable Web Arguments</h2>
             <p>See the <code>showcase.mvc.data.custom</code> package for the @Controller code</p>
             <ul>
-                <text-link link="/data/custom"></text-link>
+                <text-link link="/data/custom/request-attribute"></text-link>
+                <text-link link="/data/custom/client"></text-link>
             </ul>
         </div>	    
     `,

@@ -2,12 +2,9 @@ spring:
   mvc:
     async:
       request-timeout: 60000
-    contentnegotiation:
-      favor-path-extension: true
-      media-types.xml: application/xml
-      media-types.json: application/json
-    pathmatch:
-      use-registered-suffix-pattern: true
+  thymeleaf:
+    excluded-view-names: text
+    template-resolver-order: 100
 
 server:
   undertow:
@@ -18,3 +15,4 @@ logging.level:
   org.springframework:
     web: DEBUG
     boot: INFO
+  io.undertow: WARN

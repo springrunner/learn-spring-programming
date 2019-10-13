@@ -1,16 +1,20 @@
 package showcase.mvc.convert;
 
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.Collection;
 import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/convert")
 public class ConvertController {
-
+	
 	@GetMapping("primitive")
 	public String primitive(@RequestParam Integer value) {
 		return "Converted primitive " + value;

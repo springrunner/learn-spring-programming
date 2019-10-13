@@ -20,14 +20,14 @@ export default {
             <ul>
                 <text-link link="/messageconverters/json" method="post" content-type="application/json" data='{"foo":"bar","fruit":"apple"}' text="Read JSON"></text-link>
                 <text-link link="/messageconverters/json" accept="application/json" text="Write JSON via Accept=application/json"></text-link>
-                <text-link link="/messageconverters/json.json" text="Write JSON via '.json'"></text-link>
+                <text-link link="/messageconverters/json.json" accept="text/plan" text="Write JSON via '.json'"></text-link>
             </ul>
             
             <h6>Jaxb2RootElementHttpMessageConverter</h6>
             <ul>
                 <text-link link="/messageconverters/xml" method="post" content-type="application/xml" data="<javaBean><foo>bar</foo><fruit>apple</fruit></javaBean>" text="Read XML"></text-link>
                 <text-link link="/messageconverters/xml" accept="application/xml" text="Write XML via Accept=application/xml"></text-link>
-                <text-link link="/messageconverters/xml.xml" text="Write XML via '.xml'"></text-link>
+                <text-link link="/messageconverters/xml.xml" accept="text/plan" text="Write XML via '.xml'"></text-link>
             </ul>            
             
             <h6>AtomFeedHttpMessageConverter</h6>

@@ -18,7 +18,17 @@ public class RequestDataController {
     }
 
     @GetMapping("param")
-    public String withParam(@RequestParam String foo) {
+    public String withParam(@RequestParam("foo") String foo) {
+        return "Obtained 'foo' query parameter value '" + foo + "'";
+    }
+
+    @GetMapping("param/no-name")
+    public String withParamByNoName(@RequestParam String foo) {
+        return "Obtained 'foo' query parameter value '" + foo + "'";
+    }
+
+    @GetMapping("param/no-request-param")
+    public String withParamByNoRequestParam(String foo) {
         return "Obtained 'foo' query parameter value '" + foo + "'";
     }
 
@@ -28,7 +38,7 @@ public class RequestDataController {
     }
 
     @GetMapping("path/{var}")
-    public String withPathVariable(@PathVariable String var) {
+    public String withPathVariable(@PathVariable("var") String var) {
         return "Obtained 'path/{var}' path variable value '" + var + "'";
     }
 

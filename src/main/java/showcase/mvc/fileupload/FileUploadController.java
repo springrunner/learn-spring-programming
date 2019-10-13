@@ -29,7 +29,7 @@ public class FileUploadController {
 	}
 
 	@PostMapping(params = { "part=use" })
-	public ModelAndView processPartUpload(@RequestParam("file") Part file, RedirectAttributes redirectAttributes) {
+	public ModelAndView processPartUpload(Part file, RedirectAttributes redirectAttributes) {
 		redirectAttributes.addFlashAttribute("message",
 				"You successfully uploaded Part[" + file.getSubmittedFileName() + "]");
 

@@ -1,14 +1,26 @@
 package showcase.mvc.messageconverter;
 
-import com.rometools.rome.feed.atom.Feed;
-import com.rometools.rome.feed.rss.Channel;
+import org.springframework.http.HttpEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rometools.rome.feed.atom.Feed;
+import com.rometools.rome.feed.rss.Channel;
 
 @RestController
 @RequestMapping("/messageconverters")
 public class MessageConvertersController {
+	
+	@GetMapping("/simple")
+	public JavaBean simple() {
+		return new JavaBean("bar", "apple");
+	}
 
 	// StringHttpMessageConverter
 
@@ -16,7 +28,7 @@ public class MessageConvertersController {
 	public String readString(@RequestBody String string) {
 		return "Read string '" + string + "'";
 	}
-
+	
 	@GetMapping("/string")
 	public String writeString() {
 		return "Wrote a string";
@@ -39,7 +51,7 @@ public class MessageConvertersController {
 
 	// MappingJackson2HttpMessageConverter (requires Jackson2 on the classpath - particularly useful for serving JavaScript clients that expect to work with JSON)
 
-	@PostMapping("/json")
+	@PostMapping(value = "/json", consumes = "application/json")
 	public String readJson(@RequestBody JavaBean bean) {
 		return "Read from JSON: " + bean;
 	}
@@ -51,7 +63,7 @@ public class MessageConvertersController {
 
 	// Jaxb2RootElementHttpMessageConverter (requires JAXB2 on the classpath - useful for serving clients that expect to work with XML)
 
-	@PostMapping("/xml")
+	@PostMapping(value = "/xml", consumes = "application/xml")
 	public String readXml(@RequestBody JavaBean bean) {
 		return "Read from XML: " + bean;
 	}
@@ -64,8 +76,8 @@ public class MessageConvertersController {
 	// AtomFeedHttpMessageConverter (requires Rome on the classpath - useful for serving Atom feeds)
 
 	@PostMapping("/atom")
-	public String readFeed(@RequestBody Feed feed) {
-		return "Read " + feed.getTitle();
+	public String readFeed(HttpEntity<Feed> entity) {
+		return "Read " + entity.getBody().getTitle();
 	}
 
 	@GetMapping("/atom")
@@ -79,8 +91,8 @@ public class MessageConvertersController {
 	// RssChannelHttpMessageConverter (requires Rome on the classpath - useful for serving RSS feeds)
 
 	@PostMapping("/rss")
-	public String readChannel(@RequestBody Channel channel) {
-		return "Read " + channel.getTitle();
+	public String readChannel(HttpEntity<Channel> entity) {
+		return "Read " + entity.getBody().getTitle();
 	}
 
 	@GetMapping("/rss")
