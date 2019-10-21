@@ -18,3 +18,4 @@ out/
 *.iml
 *.ipr
 /out/
+/.metadata/

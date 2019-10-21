@@ -7,9 +7,13 @@
   <img width="640px" src=".README/spring-web-programming.jpg">
 </p>
 
-[여기](https://drive.google.com/open?id=1L2X-JQ8qGCe-5NlUipsR8F7qq1EOjBXd)에서 학습 자료를 볼 수 있습니다. 자료 중 일부는 비공개 처리되어 있습니다. 비공개 영역은 스프링러너 트레이닝에서 만날 수 있습니다.
+[여기](https://springrunner.io/learn-spring-web-programming/)에서 학습 자료를 볼 수 있습니다. 자료 중 일부는 비공개 처리되어 있습니다. 비공개 영역은 스프링러너 트레이닝에서 만날 수 있습니다.
 
-`spring-web-showcase` 프로젝트는 간단한 예제를 통해 다양한 스프링 웹 기능을 볼 수 있도록 작성되었습니다. (문서에서 다루지 않는 기능들도 포함되어 있습니다.)
+`spring-web-showcase` 프로젝트는 간단한 예제를 통해 다양한 스프링 웹 기능을 볼 수 있도록 작성되었습니다. 학습 자료에서 다루지 않는 기능들도 포함되어 있습니다.
+
+<p align="center">
+  <img width="640px" src=".README/spring-web-showcase.jpg">
+</p>
 
 ## 학습구성
 본 학습 과정은 다음과 같이 구성되어 있습니다.
