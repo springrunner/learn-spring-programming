@@ -15,11 +15,11 @@
     <script type="text/javascript">
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.2.228/build/pdf.worker.js';
         document.addEventListener('webviewerloaded', function(event) {
-            PDFViewerApplicationOptions.set('defaultUrl', './textbooks/learn-spring-web-programming.pdf')
-            PDFViewerApplicationOptions.set('disableHistory', true)
-            PDFViewerApplicationOptions.set('imageResourcesPath', './assets/pdfjs-dist@2.2.228/web/images/')
-            PDFViewerApplicationOptions.set('cMapUrl', './assets/pdfjs-dist@2.2.228/web/cmaps/')
-            PDFViewerApplicationOptions.set('workerSrc', pdfjsLib.GlobalWorkerOptions.workerSrc)
+            PDFViewerApplicationOptions.set('defaultUrl', './textbooks/learn-spring-web-programming.pdf');
+            PDFViewerApplicationOptions.set('disableHistory', true);
+            PDFViewerApplicationOptions.set('imageResourcesPath', './assets/pdfjs-dist@2.2.228/web/images/');
+            PDFViewerApplicationOptions.set('cMapUrl', './assets/pdfjs-dist@2.2.228/web/cmaps/');
+            PDFViewerApplicationOptions.set('workerSrc', pdfjsLib.GlobalWorkerOptions.workerSrc);
         });
         document.addEventListener('DOMContentLoaded', function(event) {
             PDFViewerApplication.appConfig.toolbar.openFile.setAttribute('hidden', 'true');
@@ -30,8 +30,31 @@
             PDFViewerApplication.appConfig.secondaryToolbar.pageRotateCcwButton.setAttribute('hidden', 'true');
             PDFViewerApplication.appConfig.secondaryToolbar.cursorSelectToolButton.setAttribute('hidden', 'true');
             PDFViewerApplication.appConfig.secondaryToolbar.cursorHandToolButton.setAttribute('hidden', 'true');
-            PDFViewerApplication.appConfig.secondaryToolbar.printButton.setAttribute('hidden', 'true');
-        });
+			PDFViewerApplication.appConfig.secondaryToolbar.printButton.setAttribute('hidden', 'true');
+		});
+
+		function bindEvents(callback) {
+			let interval = 10;
+			window.setTimeout(function() {
+				if (window['PDFViewerApplication'] && window['PDFViewerApplication']['eventBus']) {
+					callback(window['PDFViewerApplication']['eventBus']);
+				} else {
+					window.setTimeout(arguments.callee, interval);
+				}
+			}, interval);
+		}
+		bindEvents(function(eventBus) {
+			eventBus.on('documentloaded', function(event) {
+				gtag('event', 'view', {
+					'event_category': 'learn-spring-web-programming'
+				});
+			});
+			eventBus.on('download', function(event) {
+				gtag('event', 'download', {
+					'event_category': 'learn-spring-web-programming'
+				});
+			});
+		});
     </script>
 </head>
 <body tabindex="1" class="loadingInProgress">
