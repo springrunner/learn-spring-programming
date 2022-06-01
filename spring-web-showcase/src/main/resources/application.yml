@@ -1,5 +1,7 @@
 spring:
   mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
     async:
       request-timeout: 60000
   thymeleaf:
@@ -8,7 +10,8 @@ spring:
 
 server:
   undertow:
-    worker-threads: 10
+    threads:
+      worker: 10
 
 logging.level:
   showcase: DEBUG

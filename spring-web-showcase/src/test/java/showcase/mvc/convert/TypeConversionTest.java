@@ -6,9 +6,7 @@ import java.text.ParseException;
 import java.util.Locale;
 import java.util.Objects;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.BlockJUnit4ClassRunner;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.SimpleTypeConverter;
 import org.springframework.beans.propertyeditors.CustomBooleanEditor;
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
@@ -18,7 +16,6 @@ import org.springframework.format.support.DefaultFormattingConversionService;
 import org.springframework.format.support.FormattingConversionService;
 import org.springframework.util.NumberUtils;
 
-@RunWith(BlockJUnit4ClassRunner.class)
 public class TypeConversionTest {
 	
 	@Test
