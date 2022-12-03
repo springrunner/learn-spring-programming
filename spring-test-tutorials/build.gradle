@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'dev.springrunner'
+version = '1.0.0'
+
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-reactor-netty'
+		
+	implementation 'org.springframework:spring-webmvc'
+	implementation 'org.springframework:spring-webflux'
+	
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'	
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.named("bootJar") {
+	enabled = false
+}
