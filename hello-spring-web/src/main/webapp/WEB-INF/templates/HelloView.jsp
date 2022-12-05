@@ -12,7 +12,7 @@
   </style>
 </head>
 <body>
-  <h2>${hello.name}님 안녕하세요.</h2>
+  <h2>${hello.name()}님 안녕하세요.</h2>
   <p>현재 시간은 <spring:eval expression="hello.currentDatetime"/>입니다.</p>
 </body>
 </html>
